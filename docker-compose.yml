@@ -1,0 +1,4 @@
+playground:
+  build: .
+  ports:
+    - "2222:22"
