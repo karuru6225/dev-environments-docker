@@ -1,0 +1,5 @@
+[user]
+  name = karuru6225
+  email = e2hjhi@gmail.com
+[credential]
+  helper = store --file /tmp/credentials/.git-credentials

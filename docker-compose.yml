@@ -2,3 +2,5 @@ playground:
   build: .
   ports:
     - "2222:22"
+  volumes:
+    - credentials:/tmp/credentials
