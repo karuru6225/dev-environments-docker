@@ -21,7 +21,7 @@ filetype plugin indent on
 " 文字コード関連
 "
 if &encoding !=# 'utf-8'
-	set encoding=japan
+	set encoding=utf-8
 	set fileencoding=japan
 endif
 if has('iconv')

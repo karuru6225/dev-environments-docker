@@ -23,16 +23,15 @@ COPY dotfiles/.bashrc_additional /root
 COPY dotfiles/.gitconfig /root
 RUN echo ". .bashrc_additional" >> /root/.bashrc
 RUN . /root/.bashrc
-# RUN /root/.nodenv/bin/nodenv install --list
-RUN /root/.nodenv/bin/nodenv install 12.11.1
-RUN /root/.nodenv/bin/nodenv install 10.16.3
-RUN /root/.nodenv/bin/nodenv global 12.11.1
 
 RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 RUN mkdir /root/.ssh
 RUN mkdir /var/run/sshd
 COPY playground.pub /tmp/playground.pub
+COPY ssh_config /root/.ssh/config
+RUN chmod 600 /root/.ssh/config
+RUN ln -s /tmp/credentials/github /root/.ssh/github
 RUN cat /tmp/playground.pub >> /root/.ssh/authorized_keys
 
 CMD ["/usr/sbin/sshd", "-D"]

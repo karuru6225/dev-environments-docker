@@ -89,4 +89,5 @@ fi
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export PATH="$HOME/.nodenv/bin:$PATH"
+export LANG=ja_JP.UTF8
 eval "$(nodenv init -)"

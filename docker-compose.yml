@@ -2,5 +2,7 @@ playground:
   build: .
   ports:
     - "2222:22"
+    - "8080:8080"
   volumes:
     - credentials:/tmp/credentials
+    - work:/root/work
