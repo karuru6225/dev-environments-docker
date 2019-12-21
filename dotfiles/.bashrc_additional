@@ -90,4 +90,5 @@ fi
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export PATH="$HOME/.nodenv/bin:$PATH"
 export LANG=ja_JP.UTF8
+export EDITOR=vim
 eval "$(nodenv init -)"
