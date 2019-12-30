@@ -3,6 +3,7 @@ playground:
   ports:
     - "2222:22"
     - "8080:8080"
+    - "3000:3000"
   volumes:
     - credentials:/tmp/credentials
     - work:/root/work
